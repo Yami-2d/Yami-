@@ -383,20 +383,20 @@ local function CreateClicker(Button)
 	NewClicker.Parent = Button
 end
 
-SysBroker.Name = "SysBroker"
-SysBroker.Parent = game.CoreGui
-SysBroker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Darkaness.Name = "Darkaness"
+Darkaness.Parent = game.CoreGui
+Darkaness.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Background.Name = "Background"
-Background.Parent = SysBroker
+Background.Parent = Darkaness
 Background.AnchorPoint = Vector2.new(0.5, 0.5)
 Background.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Background.BorderColor3 = Color3.fromRGB(0, 255, 255)
+Background.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Background.Position = UDim2.new(0.5, 0, 0.5, 0)
 Background.Size = UDim2.new(0, 500, 0, 350)
 Background.ZIndex = 9
 Background.Image = "rbxassetid://159991693"
-Background.ImageColor3 = Color3.fromRGB(0, 255, 255)
+Background.ImageColor3 = Color3.fromRGB(255, 0, 0)
 Background.ImageTransparency = 0.600
 Background.ScaleType = Enum.ScaleType.Tile
 Background.SliceCenter = Rect.new(0, 256, 0, 256)
@@ -412,8 +412,8 @@ TitleBarLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TitleBarLabel.BorderSizePixel = 0
 TitleBarLabel.Size = UDim2.new(1, 0, 0, 30)
 TitleBarLabel.Font = Enum.Font.Unknown
-TitleBarLabel.Text = "____/SYSTEMBROKEN\\___"
-TitleBarLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+TitleBarLabel.Text = "____/Darkaness\\___"
+TitleBarLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
 TitleBarLabel.TextScaled = true
 TitleBarLabel.TextSize = 14.000
 TitleBarLabel.TextWrapped = true
@@ -428,110 +428,55 @@ SectionList.BorderSizePixel = 0
 SectionList.Position = UDim2.new(0, 0, 0, 30)
 SectionList.Size = UDim2.new(0, 105, 0, 320)
 
-Home_Section_Button.Name = "Home_Section_Button"
+-- الزر الأول
+local function styleButton(button, name)
+	button.Name = name
+	button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	button.BackgroundTransparency = 0.500
+	button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	button.BorderSizePixel = 0
+	button.Size = UDim2.new(0, 105, 0, 30)
+	button.Font = Enum.Font.Oswald
+	button.TextColor3 = Color3.fromRGB(0, 0, 0)
+	button.TextScaled = true
+	button.TextSize = 14.000
+	button.TextWrapped = true
+end
+
 Home_Section_Button.Parent = SectionList
-Home_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Home_Section_Button.BackgroundTransparency = 0.500
-Home_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Home_Section_Button.BorderSizePixel = 0
 Home_Section_Button.Position = UDim2.new(0, 0, 0, 25)
-Home_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Home_Section_Button.Font = Enum.Font.Oswald
 Home_Section_Button.Text = "Home"
-Home_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Home_Section_Button.TextScaled = true
-Home_Section_Button.TextSize = 14.000
-Home_Section_Button.TextWrapped = true
+styleButton(Home_Section_Button, "Home_Section_Button")
 
-Game_Section_Button.Name = "Game_Section_Button"
 Game_Section_Button.Parent = SectionList
-Game_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Game_Section_Button.BackgroundTransparency = 0.500
-Game_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Game_Section_Button.BorderSizePixel = 0
 Game_Section_Button.Position = UDim2.new(0, 0, 0, 65)
-Game_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Game_Section_Button.Font = Enum.Font.Oswald
 Game_Section_Button.Text = "Game"
-Game_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Game_Section_Button.TextScaled = true
-Game_Section_Button.TextSize = 14.000
-Game_Section_Button.TextWrapped = true
+styleButton(Game_Section_Button, "Game_Section_Button")
 
-Character_Section_Button.Name = "Character_Section_Button"
 Character_Section_Button.Parent = SectionList
-Character_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Character_Section_Button.BackgroundTransparency = 0.500
-Character_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Character_Section_Button.BorderSizePixel = 0
 Character_Section_Button.Position = UDim2.new(0, 0, 0, 105)
-Character_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Character_Section_Button.Font = Enum.Font.Oswald
 Character_Section_Button.Text = "Character"
-Character_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Character_Section_Button.TextScaled = true
-Character_Section_Button.TextSize = 14.000
-Character_Section_Button.TextWrapped = true
+styleButton(Character_Section_Button, "Character_Section_Button")
 
-Target_Section_Button.Name = "Target_Section_Button"
 Target_Section_Button.Parent = SectionList
-Target_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Target_Section_Button.BackgroundTransparency = 0.500
-Target_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Target_Section_Button.BorderSizePixel = 0
 Target_Section_Button.Position = UDim2.new(0, 0, 0, 145)
-Target_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Target_Section_Button.Font = Enum.Font.Oswald
 Target_Section_Button.Text = "Target"
-Target_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Target_Section_Button.TextScaled = true
-Target_Section_Button.TextSize = 14.000
-Target_Section_Button.TextWrapped = true
+styleButton(Target_Section_Button, "Target_Section_Button")
 
-Animations_Section_Button.Name = "Animations_Section_Button"
 Animations_Section_Button.Parent = SectionList
-Animations_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Animations_Section_Button.BackgroundTransparency = 0.500
-Animations_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Animations_Section_Button.BorderSizePixel = 0
 Animations_Section_Button.Position = UDim2.new(0, 0, 0, 185)
-Animations_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Animations_Section_Button.Font = Enum.Font.Oswald
 Animations_Section_Button.Text = "Animations"
-Animations_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Animations_Section_Button.TextScaled = true
-Animations_Section_Button.TextSize = 14.000
-Animations_Section_Button.TextWrapped = true
+styleButton(Animations_Section_Button, "Animations_Section_Button")
 
-Misc_Section_Button.Name = "Misc_Section_Button"
 Misc_Section_Button.Parent = SectionList
-Misc_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Misc_Section_Button.BackgroundTransparency = 0.500
-Misc_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Misc_Section_Button.BorderSizePixel = 0
 Misc_Section_Button.Position = UDim2.new(0, 0, 0, 225)
-Misc_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Misc_Section_Button.Font = Enum.Font.Oswald
 Misc_Section_Button.Text = "Misc"
-Misc_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Misc_Section_Button.TextScaled = true
-Misc_Section_Button.TextSize = 14.000
-Misc_Section_Button.TextWrapped = true
+styleButton(Misc_Section_Button, "Misc_Section_Button")
 
-Credits_Section_Button.Name = "Credits_Section_Button"
 Credits_Section_Button.Parent = SectionList
-Credits_Section_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-Credits_Section_Button.BackgroundTransparency = 0.500
-Credits_Section_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Credits_Section_Button.BorderSizePixel = 0
 Credits_Section_Button.Position = UDim2.new(0, 0, 0, 265)
-Credits_Section_Button.Size = UDim2.new(0, 105, 0, 30)
-Credits_Section_Button.Font = Enum.Font.Oswald
 Credits_Section_Button.Text = "Credits"
-Credits_Section_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Credits_Section_Button.TextScaled = true
-Credits_Section_Button.TextSize = 14.000
-Credits_Section_Button.TextWrapped = true
+styleButton(Credits_Section_Button, "Credits_Section_Button")
 
 Game_Section.Name = "Game_Section"
 Game_Section.Parent = Background
@@ -546,81 +491,28 @@ Game_Section.Visible = false
 Game_Section.CanvasSize = UDim2.new(0, 0, 1.85, 0)
 Game_Section.ScrollBarThickness = 5
 
-AntiRagdoll_Button.Name = "AntiRagdoll_Button"
-AntiRagdoll_Button.Parent = Game_Section
-AntiRagdoll_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-AntiRagdoll_Button.BackgroundTransparency = 0.500
-AntiRagdoll_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AntiRagdoll_Button.BorderSizePixel = 0
-AntiRagdoll_Button.Position = UDim2.new(0, 25, 0, 25)
-AntiRagdoll_Button.Size = UDim2.new(0, 150, 0, 30)
-AntiRagdoll_Button.Font = Enum.Font.Oswald
-AntiRagdoll_Button.Text = "Anti ragdoll"
-AntiRagdoll_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-AntiRagdoll_Button.TextScaled = true
-AntiRagdoll_Button.TextSize = 14.000
-AntiRagdoll_Button.TextWrapped = true
+local function styleGameButton(button, name, text, posX, posY)
+	button.Name = name
+	button.Parent = Game_Section
+	button.Position = UDim2.new(0, posX, 0, posY)
+	button.Size = UDim2.new(0, 150, 0, 30)
+	button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	button.BackgroundTransparency = 0.500
+	button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	button.BorderSizePixel = 0
+	button.Font = Enum.Font.Oswald
+	button.Text = text
+	button.TextColor3 = Color3.fromRGB(0, 0, 0)
+	button.TextScaled = true
+	button.TextSize = 14.000
+	button.TextWrapped = true
+end
 
-PotionFling_Button.Name = "PotionFling_Button"
-PotionFling_Button.Parent = Game_Section
-PotionFling_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-PotionFling_Button.BackgroundTransparency = 0.500
-PotionFling_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PotionFling_Button.BorderSizePixel = 0
-PotionFling_Button.Position = UDim2.new(0, 210, 0, 75)
-PotionFling_Button.Size = UDim2.new(0, 150, 0, 30)
-PotionFling_Button.Font = Enum.Font.Oswald
-PotionFling_Button.Text = "Potion Fling"
-PotionFling_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PotionFling_Button.TextScaled = true
-PotionFling_Button.TextSize = 14.000
-PotionFling_Button.TextWrapped = true
-
-SpamMines_Button.Name = "SpamMines_Button"
-SpamMines_Button.Parent = Game_Section
-SpamMines_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-SpamMines_Button.BackgroundTransparency = 0.500
-SpamMines_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SpamMines_Button.BorderSizePixel = 0
-SpamMines_Button.Position = UDim2.new(0, 25, 0, 75)
-SpamMines_Button.Size = UDim2.new(0, 150, 0, 30)
-SpamMines_Button.Font = Enum.Font.Oswald
-SpamMines_Button.Text = "Spam mines"
-SpamMines_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-SpamMines_Button.TextScaled = true
-SpamMines_Button.TextSize = 14.000
-SpamMines_Button.TextWrapped = true
-
-PushAura_Button.Name = "PushAura_Button"
-PushAura_Button.Parent = Game_Section
-PushAura_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-PushAura_Button.BackgroundTransparency = 0.500
-PushAura_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PushAura_Button.BorderSizePixel = 0
-PushAura_Button.Position = UDim2.new(0, 210, 0, 25)
-PushAura_Button.Size = UDim2.new(0, 150, 0, 30)
-PushAura_Button.Font = Enum.Font.Oswald
-PushAura_Button.Text = "Push aura"
-PushAura_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PushAura_Button.TextScaled = true
-PushAura_Button.TextSize = 14.000
-PushAura_Button.TextWrapped = true
-
-BreakCannons_Button.Name = "BreakCannons_Button"
-BreakCannons_Button.Parent = Game_Section
-BreakCannons_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
-BreakCannons_Button.BackgroundTransparency = 0.500
-BreakCannons_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BreakCannons_Button.BorderSizePixel = 0
-BreakCannons_Button.Position = UDim2.new(0, 25, 0, 225)
-BreakCannons_Button.Size = UDim2.new(0, 150, 0, 30)
-BreakCannons_Button.Font = Enum.Font.Oswald
-BreakCannons_Button.Text = "Break Cannons"
-BreakCannons_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-BreakCannons_Button.TextScaled = true
-BreakCannons_Button.TextSize = 14.000
-BreakCannons_Button.TextWrapped = true
-
+styleGameButton(AntiRagdoll_Button, "AntiRagdoll_Button", "Anti ragdoll", 25, 25)
+styleGameButton(PushAura_Button, "PushAura_Button", "Push aura", 210, 25)
+styleGameButton(SpamMines_Button, "SpamMines_Button", "Spam mines", 25, 75)
+styleGameButton(PotionFling_Button, "PotionFling_Button", "Potion Fling", 210, 75)
+styleGameButton(BreakCannons_Button, "BreakCannons_Button", "Break Cannons", 25, 225)
 LethalCannons_Button.Name = "LethalCannons_Button"
 LethalCannons_Button.Parent = Game_Section
 LethalCannons_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
